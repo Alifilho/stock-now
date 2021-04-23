@@ -31,7 +31,7 @@ const Login = () => {
           autoComplete="email"
           keyboard="email-address"
           error={errors.email}
-          styles={{ marginTop: '3%', minWidth: '60%' }}
+          style={{ marginTop: '3%' }}
         />
         {errors.email && <FormErrorMessage>This is required.</FormErrorMessage>}
 
@@ -44,7 +44,7 @@ const Login = () => {
           type="password"
           autoComplete="password"
           error={errors.password}
-          styles={{ marginTop: '3%', minWidth: '60%' }}
+          style={{ marginTop: '3%' }}
         />
         {errors.password && (
           <FormErrorMessage>This is required</FormErrorMessage>

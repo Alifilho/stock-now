@@ -3,6 +3,7 @@ import { TouchableOpacity } from 'react-native';
 
 export const Wrapper = styled(TouchableOpacity)`
   background-color: #f0f0f0f0;
+  flex-direction: row;
   min-height: 50px;
   min-width: 40%;
   align-items: center;

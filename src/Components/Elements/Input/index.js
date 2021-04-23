@@ -2,7 +2,7 @@ import React from 'react';
 import { TextInput } from 'react-native';
 import { Controller } from 'react-hook-form';
 
-import style from './styles';
+import defaultStyle from './styles';
 
 const Input = ({
   control,
@@ -14,7 +14,7 @@ const Input = ({
   error,
   autoComplete = 'off',
   keyboard = 'default',
-  styles = {},
+  style = {},
 }) => {
   return (
     <Controller
@@ -24,7 +24,7 @@ const Input = ({
       render={({ field: { onChange, onBlur, value } }) => (
         <TextInput
           onBlur={onBlur}
-          style={[style(error).input, styles]}
+          style={[defaultStyle(error).input, style]}
           onChangeText={(value) => onChange(value)}
           value={value}
           autoCompleteType={autoComplete}

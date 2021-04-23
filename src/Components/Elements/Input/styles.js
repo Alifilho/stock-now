@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-const style = (error) =>
+const defaultStyle = (error) =>
   StyleSheet.create({
     input: {
       display: 'flex',
@@ -14,4 +14,4 @@ const style = (error) =>
     },
   });
 
-export default style;
+export default defaultStyle;

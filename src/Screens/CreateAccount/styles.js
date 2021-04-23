@@ -1,6 +1,7 @@
 import styled from 'styled-components';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-export const Wrapper = styled.View`
+export const Wrapper = styled(SafeAreaView)`
   min-width: 100%;
   min-height: 100%;
 `;
