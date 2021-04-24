@@ -7,7 +7,7 @@ const CreateAccountButton = ({ choose, icon, style }) => {
   return (
     <Wrapper style={style} onPress={() => choose()}>
       <Ionicons
-        name={icon === 'customer' ? 'cart-outline' : 'person-outline'}
+        name={icon === 'customer' ? 'person-outline' : 'cart-outline'}
         size={30}
         color="#666666"
       />

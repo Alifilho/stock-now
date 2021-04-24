@@ -2,6 +2,7 @@ import React from 'react';
 import { View } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { Col, Row, Grid } from 'react-native-easy-grid';
 
 import Input from '../../../../Components/Elements/Input';
 import FormErrorMessage from '../../../../Components/Elements/FormErrorMessage';
@@ -21,86 +22,113 @@ const CreateProviderAccount = () => {
       style={{ minWidth: '100%', minHeight: '100%', alignItems: 'center' }}
     >
       <View style={{ marginTop: -25, minWidth: '60%' }}>
-        <Input
-          control={control}
-          name="name"
-          rules={{ required: true }}
-          maxLength={70}
-          placeholder="Store Name"
-          type="organizationName"
-          autoComplete="name"
-          error={errors.name}
-        />
-        {errors.name && <FormErrorMessage>This is required.</FormErrorMessage>}
+        <Grid>
+          <Col>
+            <Input
+              control={control}
+              name="storeName"
+              rules={{ required: true }}
+              maxLength={70}
+              placeholder="Store Name"
+              type="organizationName"
+              error={errors.storeName}
+            />
+            {errors.storeName && (
+              <FormErrorMessage>This is required.</FormErrorMessage>
+            )}
 
-        <Input
-          control={control}
-          name="address"
-          rules={{ required: true }}
-          maxLength={70}
-          placeholder="Address"
-          type="fullStreetAddress"
-          autoComplete="street-address"
-          error={errors.address}
-        />
-        {errors.address && (
-          <FormErrorMessage>This is required.</FormErrorMessage>
-        )}
+            <Input
+              control={control}
+              name="email"
+              rules={{ required: true }}
+              maxLength={70}
+              placeholder="Email"
+              type="emailAddress"
+              autoComplete="email"
+              keyboard="email-address"
+              error={errors.email}
+            />
+            {errors.email && (
+              <FormErrorMessage>This is required.</FormErrorMessage>
+            )}
 
-        <Input
-          control={control}
-          name="number"
-          rules={{ required: true }}
-          maxLength={5}
-          placeholder="Number"
-          type="streetAddressLine2"
-          keyboard="numeric"
-          error={errors.number}
-        />
-        {errors.number && (
-          <FormErrorMessage>This is required.</FormErrorMessage>
-        )}
+            <Input
+              control={control}
+              name="cnpj"
+              rules={{ required: true }}
+              maxLength={14}
+              placeholder="CNPJ"
+              type="none"
+              error={errors.cnpj}
+            />
+            {errors.cnpj && (
+              <FormErrorMessage>This is required.</FormErrorMessage>
+            )}
 
-        <Input
-          control={control}
-          name="city"
-          rules={{ required: true }}
-          maxLength={70}
-          placeholder="City"
-          type="addressCity"
-          error={errors.city}
-        />
-        {errors.city && <FormErrorMessage>This is required.</FormErrorMessage>}
+            <Input
+              control={control}
+              name="cnpj"
+              rules={{ required: true }}
+              maxLength={14}
+              placeholder="CNPJ"
+              type="none"
+              error={errors.cnpj}
+            />
+            {errors.cnpj && (
+              <FormErrorMessage>This is required.</FormErrorMessage>
+            )}
 
-        <Input
-          control={control}
-          name="cpf"
-          rules={{ required: true }}
-          maxLength={11}
-          placeholder="CPF"
-          type="none"
-          keyboard="numeric"
-          error={errors.cpf}
-        />
-        {errors.cpf && <FormErrorMessage>This is required.</FormErrorMessage>}
+            <Input
+              control={control}
+              name="password"
+              rules={{ required: true }}
+              maxLength={70}
+              placeholder="Password"
+              type="password"
+              autoComplete="password"
+              error={errors.password}
+            />
+            {errors.password && (
+              <FormErrorMessage>This is required.</FormErrorMessage>
+            )}
 
-        <Input
-          control={control}
-          name="cep"
-          rules={{ required: true }}
-          maxLength={70}
-          placeholder="CEP"
-          type="postalCode"
-          autoComplete="postal-code"
-          error={errors.cep}
-        />
-        {errors.cep && <FormErrorMessage>This is required.</FormErrorMessage>}
+            <Input
+              control={control}
+              name="confirmPassword"
+              rules={{ required: true }}
+              maxLength={70}
+              placeholder="Confirm Password"
+              type="password"
+              autoComplete="password"
+              error={errors.confirmPassword}
+            />
+            {errors.confirmPassword && (
+              <FormErrorMessage>This is required.</FormErrorMessage>
+            )}
 
-        <Button
-          style={{ marginTop: '10%' }}
-          press={handleSubmit(onSubmit)}
-          text="Sign Up"
-        />
+            <Input
+              control={control}
+              name="phone"
+              rules={{ required: true }}
+              maxLength={11}
+              placeholder="Phone"
+              type="telephoneNumber"
+              autoComplete="tel"
+              keyboard="phone-pad"
+              error={errors.phone}
+            />
+            {errors.phone && (
+              <FormErrorMessage>This is required.</FormErrorMessage>
+            )}
+          </Col>
+          <Col></Col>
+
+          <Button
+            style={{ marginTop: '10%' }}
+            press={handleSubmit(onSubmit)}
+            text="Sign Up"
+          />
+        </Grid>
       </View>
     </SafeAreaView>
   );
