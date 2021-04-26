@@ -7,7 +7,7 @@ import {
   getCurrentPositionAsync,
 } from 'expo-location';
 
-import PermissionDenied from '../../Components/Layout/PermissionDenied';
+import PermissionDenied from '../../components/layout/PermissionDenied';
 
 const Map = () => {
   const [hasPermission, setHasPermission] = useState(false);

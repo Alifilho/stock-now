@@ -2,19 +2,24 @@ import React from 'react';
 import { View } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { SafeAreaView } from 'react-native-safe-area-context';
+import { useNavigation } from '@react-navigation/native';
 
-import Input from '../../../../Components/Elements/Input';
-import FormErrorMessage from '../../../../Components/Elements/FormErrorMessage';
-import Button from '../../../../Components/Elements/Button';
+import Input from '../../../../components/elements/Input';
+import FormErrorMessage from '../../../../components/elements/FormErrorMessage';
+import Button from '../../../../components/elements/Button';
 
-const CreateCustomerAccount = () => {
+const CreateProviderAccount = () => {
+  const { navigate } = useNavigation();
+
   const {
     control,
     handleSubmit,
     formState: { errors },
   } = useForm();
 
-  const onSubmit = (data) => console.log(data);
+  const onSubmit = (data) => {
+    navigate('AddressForm', data);
+  };
 
   return (
     <SafeAreaView
@@ -23,15 +28,16 @@ const CreateCustomerAccount = () => {
       <View style={{ marginTop: -25, minWidth: '60%' }}>
         <Input
           control={control}
-          name="name"
+          name="storeName"
           rules={{ required: true }}
           maxLength={70}
-          placeholder="Name"
-          type="name"
-          autoComplete="name"
-          error={errors.name}
+          placeholder="Store Name"
+          type="organizationName"
+          error={errors.storeName}
         />
-        {errors.name && <FormErrorMessage>This is required.</FormErrorMessage>}
+        {errors.storeName && (
+          <FormErrorMessage>This is required.</FormErrorMessage>
+        )}
 
         <Input
           control={control}
@@ -76,27 +82,27 @@ const CreateCustomerAccount = () => {
 
         <Input
           control={control}
-          name="cpf"
+          name="cnpj"
           rules={{ required: true }}
-          maxLength={11}
-          placeholder="CPF"
+          maxLength={14}
+          placeholder="CNPJ"
           type="none"
-          keyboard="numeric"
-          error={errors.cpf}
+          error={errors.cnpj}
         />
-        {errors.cpf && <FormErrorMessage>This is required.</FormErrorMessage>}
+        {errors.cnpj && <FormErrorMessage>This is required.</FormErrorMessage>}
 
         <Input
           control={control}
-          name="cep"
+          name="phone"
           rules={{ required: true }}
-          maxLength={70}
-          placeholder="CEP"
-          type="postalCode"
-          autoComplete="postal-code"
-          error={errors.cep}
+          maxLength={11}
+          placeholder="Phone"
+          type="telephoneNumber"
+          autoComplete="tel"
+          keyboard="phone-pad"
+          error={errors.phone}
         />
-        {errors.cep && <FormErrorMessage>This is required.</FormErrorMessage>}
+        {errors.phone && <FormErrorMessage>This is required.</FormErrorMessage>}
 
         <Button
           style={{ marginTop: '10%' }}
@@ -108,4 +114,4 @@ const CreateCustomerAccount = () => {
   );
 };
 
-export default CreateCustomerAccount;
+export default CreateProviderAccount;

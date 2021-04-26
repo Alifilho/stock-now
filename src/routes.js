@@ -7,9 +7,10 @@ import { createStackNavigator } from '@react-navigation/stack';
 // import Home from './Screens/Home';
 // import Map from './Screens/Map';
 // import Profile from './Screens/Profile';
-import CreateAccount from './Screens/CreateAccount';
-import CreateProviderAccount from './Screens/CreateAccount/Screens/CreateProvider';
-import CreateCustomerAccount from './Screens/CreateAccount/Screens/CreateCustomer';
+import CreateAccount from './screens/CreateAccount';
+import CreateProviderAccount from './screens/CreateAccount/screens/CreateProvider';
+import CreateCustomerAccount from './screens/CreateAccount/screens/CreateCustomer';
+import AddressForm from './screens/CreateAccount/screens/CreateProvider/screens/AddressForm';
 
 const Routes = () => {
   // const Tab = createBottomTabNavigator();
@@ -51,14 +52,19 @@ const Routes = () => {
           options={{ title: 'Create Account' }}
         />
         <Stack.Screen
+          name="CreateCustomerAccount"
+          component={CreateCustomerAccount}
+          options={{ title: 'Create Customer' }}
+        />
+        <Stack.Screen
           name="CreateProviderAccount"
           component={CreateProviderAccount}
           options={{ title: 'Create Provider' }}
         />
         <Stack.Screen
-          name="CreateCustomerAccount"
-          component={CreateCustomerAccount}
-          options={{ title: 'Create Customer' }}
+          name="AddressForm"
+          component={AddressForm}
+          options={{ title: 'Create Provider - Address' }}
         />
       </Stack.Navigator>
     </NavigationContainer>

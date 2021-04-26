@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigation } from '@react-navigation/native';
 
-import CreateAccountButton from '../../Components/Elements/CreateAccountButton';
+import CreateAccountButton from '../../components/elements/CreateAccountButton';
 import { Wrapper, ButtonView } from './styles';
 
 const CreateAccount = () => {
