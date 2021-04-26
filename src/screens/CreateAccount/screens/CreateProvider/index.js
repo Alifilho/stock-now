@@ -107,7 +107,7 @@ const CreateProviderAccount = () => {
         <Button
           style={{ marginTop: '10%' }}
           press={handleSubmit(onSubmit)}
-          text="Sign Up"
+          text="Next"
         />
       </View>
     </SafeAreaView>
