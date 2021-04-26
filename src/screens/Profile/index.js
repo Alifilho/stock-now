@@ -1,7 +1,8 @@
 import React from 'react';
 import { Text, ScrollView } from 'react-native';
 
-import Header from '../../components/layout/Header';
+import Header from 'components/layout/Header';
+
 import { Wrapper, Historic } from './styles';
 
 const sampleHistoric = [

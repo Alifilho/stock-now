@@ -8,9 +8,9 @@
     "esModuleInterop": true,
     "strict": true,
     "jsx": "preserve",
-    "baseUrl": "src",
+    "baseUrl": ".",
     "paths": {
-      "@/*": ["./*"]
+      "*": ["src/*"]
     }
   },
   "include": ["**/*.js"],

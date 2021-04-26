@@ -4,12 +4,12 @@ import { useRoute } from '@react-navigation/native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import { useForm } from 'react-hook-form';
 
-import Input from '../../../../../../components/elements/Input';
-import FormErrorMessage from '../../../../../../components/elements/FormErrorMessage';
-import Button from '../../../../../../components/elements/Button';
-import Select from '../../../../../../components/elements/Select';
+import Input from 'components/elements/Input';
+import FormErrorMessage from 'components/elements/FormErrorMessage';
+import Button from 'components/elements/Button';
+import Select from 'components/elements/Select';
 
-import states from '../../../../../../services/states.json';
+import states from 'services/states.json';
 
 const AddressForm = () => {
   const { params } = useRoute();

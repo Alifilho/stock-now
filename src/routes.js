@@ -4,13 +4,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 // import { createStackNavigator } from '@react-navigation/stack';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
-import Home from './screens/Home';
-import Map from './screens/Map';
-import Profile from './screens/Profile';
-// import CreateAccount from './screens/CreateAccount';
-// import CreateProviderAccount from './screens/CreateAccount/screens/CreateProvider';
-// import CreateCustomerAccount from './screens/CreateAccount/screens/CreateCustomer';
-// import AddressForm from './screens/CreateAccount/screens/CreateProvider/screens/AddressForm';
+import Home from 'screens/Home';
+import Map from 'screens/Map';
+import Profile from 'screens/Profile';
+// import CreateAccount from 'screens/CreateAccount';
+// import CreateProviderAccount from 'screens/CreateAccount/screens/CreateProvider';
+// import CreateCustomerAccount from 'screens/CreateAccount/screens/CreateCustomer';
+// import AddressForm from 'screens/CreateAccount/screens/CreateProvider/screens/AddressForm';
 
 const Routes = () => {
   const Tab = createBottomTabNavigator();

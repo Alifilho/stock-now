@@ -3,9 +3,9 @@ import { View } from 'react-native';
 import { useForm } from 'react-hook-form';
 import { SafeAreaView } from 'react-native-safe-area-context';
 
-import Input from '../../../../components/elements/Input';
-import FormErrorMessage from '../../../../components/elements/FormErrorMessage';
-import Button from '../../../../components/elements/Button';
+import Input from 'components/elements/Input';
+import FormErrorMessage from 'components/elements/FormErrorMessage';
+import Button from 'components/elements/Button';
 
 const CreateCustomerAccount = () => {
   const {

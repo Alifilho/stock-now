@@ -1,7 +1,8 @@
 import React from 'react';
 import { openURL } from 'expo-linking';
 
-import Button from '../../elements/Button';
+import Button from 'components/elements/Button';
+
 import { Wrapper, Title } from './styles';
 
 const PermissionDenied = () => {

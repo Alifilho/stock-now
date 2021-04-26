@@ -2,11 +2,11 @@ import React from 'react';
 import { View } from 'react-native';
 import { useForm } from 'react-hook-form';
 
-import Input from '../../components/elements/Input';
+import Input from 'components/elements/Input';
+import FormErrorMessage from 'components/elements/FormErrorMessage';
+import Button from 'components/elements/Button';
 
 import { Wrapper, Form, Title } from './styles';
-import FormErrorMessage from '../../components/elements/FormErrorMessage';
-import Button from '../../components/elements/Button';
 
 const Login = () => {
   const {
